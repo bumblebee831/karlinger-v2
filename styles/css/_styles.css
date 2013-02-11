@@ -1,0 +1,240 @@
+/* @import url(bootstrap.css);    */
+      
+      
+ /* ======= VIEWPORT ========= */
+      
+		/* Hintergrund des ges. Viewports (gekachelt)  */
+      body {
+      	background-image: url(../images/milimeterpapier.png);
+      	background-repeat: repeat;
+      	background-position: left top;
+      }
+      
+      
+      /* 	Aussenabstand der Sections-Abschnitte steuert den Abstand der Paletten  */
+	#ueber-uns, #leistungen, #referenzen, #kontakt, #impressum {
+/* 	margin-top: -167px; */
+	padding-top: 167px;
+	}
+	
+	#willkommen {
+	padding-top: 0px;
+	}
+	
+			/* Stellt den Abstand zwischen Navbar und ges. Contentbereich ein */                   
+      #inhalt{
+            	padding-top: 168px;
+      }
+	
+			/* Hintergrundbild Gradient mit gelber Linie im Header. Das Div kommt gleich nach body und umspannt die ganze Seite */      
+      #header-bg {
+      	background-image: url(../images/bg_03.png);
+      	background-repeat: repeat-x;
+      	background-position: 0px 0px; left - top
+      	position: relative;
+      	width: 100%;
+      	height: 100%;
+      	z-index: 0;
+      	background-attachment: fixed;
+      }
+      
+      /* Responsive Image */
+.respoimage {
+max-width: 100%;
+}
+
+/* Keine Outline */
+a:focus {
+    outline: none;
+    outline-offset: -2px;
+}
+
+a {
+    color: #d8aa00;
+    text-decoration: none;
+}
+
+a:hover {
+  color: #d8aa00;
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+	
+	 /* ======= NAVIGATIONSLEISTE ========= */
+	 
+	 /* Positionierung des Logos in der Nav.Leiste */
+#brand {
+	color: #999999;
+	display: block;
+	float: left;
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 1;
+	margin-left: 0px;
+/* 	margin-top: 28px; */
+	padding: 26px 20px 12px 172px;
+/* 	border: 3px #CC3300 dotted; */
+}
+
+#textnavi {
+float: left;
+padding: 0 0 0 60px;
+/* 	border: 3px #cccccc dotted; */
+}
+      
+.gelbeleiste {
+         	background-image: url(../images/gelbeleiste.png);
+         	background-repeat: repeat-x;
+}
+
+/* Hintergrund Abschnitt links der Textnavigation als Sliding-Door-Technik  */
+ .br-leftboarder {
+		width: 5px;
+		height: 90px;
+		float: right;
+ 	        background-image: url(../images/navi_background_1170x100.png);
+      		background-repeat: no-repeat;
+      		background-position: left bottom;
+/*        	border: 3px #FF0000 dotted; */
+ }
+ 
+ /* Hintergrund Abschnitt rechts der Textnavigation als Sliding-Door-Technik  */
+  .br-rigthborder {
+  
+  		height: 90px;
+		float: right;
+  	        background-image: url(../images/navi_background_1170x100.png);
+      		background-repeat: no-repeat;
+      		background-position: right bottom;
+ }
+ 
+/*  Alle (passiven) Links der Navigationsleiste, außer aktiv */
+ .navbar .nav > li > a {	
+    color: #FFF;
+ 	float: none;
+ 	line-height: 19px;
+ 	padding: 59px 10px 11px;
+ 	text-decoration: none;
+ 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+/*  	  	border: 5px red dotted; */
+}
+
+/* Der aktive Link der Navigationsleiste, inkl hover Zustand. */
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+	background-color: transparent;	
+	color: #ffcc00;
+	text-decoration: none;
+	background-image: url(../images/navdreieck.png);
+	background-position: center 18px; 
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+
+/* Der passive Link beim Darüberfahren (hover) */
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+	background-color: transparent;	
+	color: #ffcc00;
+	text-decoration: none;
+}
+
+ /* ======= Inhalt ========= */
+
+/* (Gestalt und Z-Position) Palette für die Sections */
+div.palette {
+/* z-index: 30; */
+/* padding-bottom: 24px; */
+/* margin-bottom: 160px; */
+	background-color: white;
+	background-position: left top;
+	-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+/* 
+-webkit-box-shadow: 3px 3px 16px 3px #cccccc;
+-moz-box-shadow: 3px 3px 16px 3px #cccccc; 
+box-shadow: 3px 3px 16px 3px #cccccc;
+ */
+
+	-webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+	-moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+	box-shadow: 0px 1px 5px 0px #4a4a4a; 
+}
+
+/* Positionierung der Banner-Bilder je Section */
+.eyechatcher{
+position: relative;
+width: 821px;
+margin-left: auto;
+margin-right:auto;
+}
+
+
+/* Platz für die Section Überschrift h2*/
+.subheadline {
+	width: 170px;
+	height: 2em;
+}
+
+/* Position und Inhalt der Border für Section-Überschrift*/
+div.muster {
+	background-image: url(../images/headlineschmuck.gif);
+	background-position: left top;
+	height: 18px;
+	background-repeat: repeat-x;
+	margin-right: 72px;
+	margin-top: 18px;
+	float: right;
+}
+
+/* Abstand des Inhalts vom linken Rand der Section(Palette) */
+
+.textboxleft {
+	margin-left: 72px !IMPORTANT;
+}
+
+/* Abstand des Inhalts vom rechten Rand der Section(Palette) */
+.textboxright {
+	margin-right: 72px !IMPORTANT;
+}
+
+/* Unterüberschrift h3  */
+.headlinespace{
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+
+/* ======= FORMULAR ========= */
+/* Formular */	
+	legend {
+		border: none;
+	}
+
+
+/* ======= TABS ========= */	
+/* 	Farbe Überschrift aktives Tab */
+.nav-tabs > li > a {
+color: #e9b900;
+}
+
+/* Tab-Segment nach links verschieben */
+.tabbable {
+	margin-left: -30px;
+}
+
+/* ======= FOOTER ========= */
+.footerposition {
+padding: 0 0 12px 0;
+margin-top: 36px;
+margin-top: 36px;
+/* 	border: 3PX #cccccc dotted; */
+}
+
+.footerposition li, .footerposition h4 {
+	text-align: center;
+}
