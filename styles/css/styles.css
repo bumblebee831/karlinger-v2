@@ -143,6 +143,12 @@ div.muster {
   background-image: url(../../images/banner_bg_h204.png);
   background-repeat: repeat-x;
   background-position: left top;
+  position: relative;
+}
+.bg-banner img {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
 }
 /* (Gestalt und Z-Position) Palette für die Sections */
 .palette {
