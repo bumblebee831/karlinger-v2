@@ -5,7 +5,9 @@
 
 <title>Danke f&uuml;r Ihre Nachricht</title>
 
-<link href="css/styles" rel="stylesheet" type="text/css">
+<link href="styles/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="styles/css/styles.css" rel="stylesheet" type="text/css">
+
 
 <style type="text/css">
 
@@ -72,7 +74,8 @@ $Absender="From:";
 $Absender.=$eMail;
 
 
-mail("info@karlinger-gmbh.de", "Nachricht", $Mailtext, $Absender);
+//mail("info@karlinger-gmbh.de", "Nachricht", $Mailtext, $Absender);
+mail("lk@kreativkombinat.de", "Nachricht", $Mailtext, $Absender);
 
 ?>
 

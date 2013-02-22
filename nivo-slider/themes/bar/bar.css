@@ -10,12 +10,15 @@ Supports Thumbs: false
 
 .theme-bar.slider-wrapper {
     position: relative;
+/* 
     border: 1px solid #333;
+ */
     overflow: hidden;
 }
 .theme-bar .nivoSlider {
 	position:relative;
-	background:#fff url(loading.gif) no-repeat 50% 50%;
+/* 	background:#fff url(loading.gif) no-repeat 50% 50%; */
+	background:#fff;
 }
 .theme-bar .nivoSlider img {
 	position:absolute;

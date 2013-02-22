@@ -16,11 +16,42 @@
 @white:                 #fff; 
 
 @yellow:				#d8aa00;
+@yellowTab:				#E9B900;
+@yellowLink:			#D8AA00;				
 
-@greyTransparent:		rgba(51, 51, 51,0.3);
+@greyTransparent:		rgba(51, 51, 51,0.6);
 
 
+// Typography
+// -------------------------
+@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
+@baseFontSize:          14px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        20px;
+@altFontFamily:         @serifFontFamily;
+
+@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsColor:         inherit; // empty to use BS default, @textColor
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+@fontSizeLarge:         @baseFontSize * 1.25; // ~18px
+@fontSizeSmall:         @baseFontSize * 0.85; // ~12px
+@fontSizeMini:          @baseFontSize * 0.75; // ~11px
+
+@paddingLarge:          11px 19px; // 44px
+@paddingSmall:          2px 10px;  // 26px
+@paddingMini:           1px 6px;   // 24px
+
+@baseBorderRadius:      4px;
+@borderRadiusLarge:     6px;
+@borderRadiusSmall:     3px;
 
    
    
@@ -30,13 +61,23 @@
    
     @backgroundColor: @white;
 	@textColor:	@grayDark;
-	@borderRadius: 6px;  
+ 
 	@boxShadow: 0px 1px 5px 0px @grayLight;  
 	@textShadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     
              /* BODY 
     ================================================== */
 body {color: @textColor}
+
+.nav-tabs > li > a {
+    color: @yellowTab;
+    font-size: @fontSizeLarge;
+}
+
+a {
+    color: @yellowLink;
+    text-decoration: none;
+}
 
 
          /* HEAD 
@@ -65,12 +106,6 @@ body {color: @textColor}
 
 	 /* ======= NAVIGATIONSLEISTE ========= */
 	 
-	 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-    background-color: #E5E5E5;
-    box-shadow: none;
-    color: #555555;
-    text-decoration: none;
-    }
 	 
 	 .navbar .nav
 	 {
@@ -80,9 +115,9 @@ body {color: @textColor}
 	 	left: 0;
 	 	margin: 50px 10px 0 0;
 	 	position: relative;
-	 	-webkit-border-radius: @borderRadius;
-	 	-moz-border-radius: @borderRadius;
-	 	border-radius: @borderRadius;
+	 	-webkit-border-radius: @borderRadiusLarge;
+	 	-moz-border-radius: @borderRadiusLarge;
+	 	border-radius: @borderRadiusLarge;
 	 	-webkit-box-shadow: @boxShadow;
 	 	-moz-box-shadow: @boxShadow;
 	 	box-shadow: @boxShadow;
@@ -97,6 +132,7 @@ body {color: @textColor}
 	margin-left: 0px;
 	padding: 24px 0 0 0;
 	max-width: 100%;
+	z-index:100;
 }
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
@@ -112,11 +148,32 @@ body {color: @textColor}
  } 
  
  .navbar-inverse .nav .active > a, 
- .navbar-inverse .nav .active > a:hover, 
- .navbar-inverse .nav .active > a:focus {
-    background-color: transparent;
-    color: @yellow;
-} 
+  .navbar-inverse .nav .active > a:hover, 
+  .navbar-inverse .nav .active > a:focus
+ {
+ 	background-color: transparent;
+ 	color: @yellow;
+ 	text-decoration: none;
+ 	box-shadow: none;
+ } 
+ 
+   .navbar-inverse .nav li
+  {
+  	position: relative;
+  }
+ 
+ .navbar-inverse .nav .active .triangle
+  {
+  	background-image: url(../../images/navdreieck.png);
+  	background-repeat: no-repeat;
+  	background-position: 0px 0px;
+  	position: absolute;
+  	top: -36px;
+  	right: 0;
+  	bottom: 0;
+  	left: 36px;
+  	/*border: 2px red solid;*/
+  } 
 
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .nav > li > a:hover {
@@ -139,7 +196,7 @@ body {color: @textColor}
       }    
       
             /* 	Aussenabstand der Sections-Abschnitte steuert den Abstand der Paletten  */
-	#ueber-uns, #leistungen, #referenzen, #kontakt, #impressum {
+	#carousell, #leistungen, #referenzen, #kontakt, #impressum, .abstandoben {
 	padding-top: 167px;
 	}
 	
@@ -185,10 +242,19 @@ div.muster {
 	padding-bottom: 24px;
 	background-color: white;
 	background-position: left top;
-	-webkit-border-radius: @borderRadius;
-	-moz-border-radius: @borderRadius;
-	border-radius: @borderRadius;
+	-webkit-border-radius: @borderRadiusLarge;
+	-moz-border-radius: @borderRadiusLarge;
+	border-radius: @borderRadiusLarge;
 	-webkit-box-shadow: @boxShadow;
 	-moz-box-shadow: @boxShadow;
 	box-shadow: @boxShadow; 
 }
+
+hr {width: 24px;}
+
+	/* Display none */		
+
+	
+		.hidden-desktop {
+  	display: none !important;
+	}
